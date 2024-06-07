@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+
+html,
+body {
+  font-family: "Acme", sans-serif;
+  height: 98%;
+  background-color: #003135;
+  /*background-color: #E9E8FF;*/
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form_main {
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #5c9498;
+  padding: 30px 30px 30px 30px;
+  border-radius: 30px;
+  /* box-shadow: -3px -3px 7px rgba(94, 104, 121, 0.288),
+    20px 20px 20px rgba(94, 104, 121, 0.288); */
+}
+
+.heading {
+  font-size: 2.5em;
+  color: #2e2e2e;
+  font-weight: 700;
+  margin: 15px 0 30px 0;
+}
+
+.inputContainer {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 10px;
+  width: 15px;
+}
+
+.inputField {
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(173, 173, 173);
+  border-radius: 30px;
+  margin: 10px 0;
+  color: black;
+  font-size: 0.8em;
+  font-weight: 500;
+  box-sizing: border-box;
+  padding-left: 30px;
+  
+}
+
+.inputField:focus {
+  outline: none;
+  border-bottom: 2px solid #003135;
+}
+
+.inputField::placeholder {
+  color: rgb(80, 80, 80);
+  font-size: 1em;
+  font-weight: 500;
+  font-family: "Acme", sans-serif;
+  color: black;
+}
+
+#button {
+  font-family: "Acme", sans-serif;
+  position: relative;
+  width: 100%;
+  border: 2px solid #003135;
+  background-color: #003135;
+  height: 40px;
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  margin: 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#button{
+  transition: all .09s ease-in-out;
+}
+  #button:hover {
+    transform: scale(1.1);
+  }
+/* #button::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.253);
+  height: 100%;
+  width: 150px;
+  top: 0;
+  left: -200px;
+  border-bottom-right-radius: 100px;
+  border-top-left-radius: 100px;
+  filter: blur(10px);
+  transition-duration: 0.5s;
+} */
+
+/* #button:hover::after {
+  transform: translateX(600px);
+  transition-duration: 0.5s;
+} */
+
+.signupContainer {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.signupContainer p {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: black;
+}
+
+
+.SignUp , .Guest{
+  width: auto;
+  height: 3em;
+  border-radius: 30em;
+  font-size: 14px;
+  font-family: inherit;
+  margin: 5px;
+  padding: 14px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.SignUp::before, .Guest::before {
+    content: "";
+  width: 0;
+  height: 3em;
+  border-radius: 30em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #5c9498 0%, #003135 100%);
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.SignUp:hover::before , .Guest:hover::before{
+  width: 11em;
+}
+
+.SignUp:hover,
+.Guest:hover {
+  color: white;
+  cursor: pointer;
+}
